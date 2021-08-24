@@ -1,0 +1,18 @@
+﻿@using GreatIdeas.Blazor.Extensions
+@inject IJSRuntime _jsRuntime
+
+@code {
+    
+      
+      [Parameter] public string Title { get; set; }
+      [Parameter] public string Description { get; set; }
+      [Parameter] public string ApplicationName { get; set; }
+
+      protected override async Task OnAfterRenderAsync(bool firstRender)
+      {
+            await _jsRuntime.SetBlazorTitle($"{Title} - {ApplicationName}");
+            
+            await _jsRuntime.SetBlazorDescription($"{Description}");
+      }
+
+}

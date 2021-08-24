@@ -1,0 +1,64 @@
+﻿@using GreatIdeas.Extensions
+
+<MudItem xs="@xs" sm="@sm" md="@md" lg="@lg">
+    <MudPaper Class="ma-2 pa-4" Elevation=2>
+        <MudItem>
+            <div class="d-flex align-center justify-center">
+                @if (ShowIcon)
+                {
+                    <MudIcon Icon=@Icon Size="Size.Medium" Class="mr-2"/>
+                    <MudText Typo="Typo.h6">@Title</MudText>
+                }
+                else
+                {
+                    <MudText Typo="Typo.h6">@Title</MudText>
+                }
+            </div>
+        </MudItem>
+        <div>
+            <MudText Typo="Typo.body2" Class="d-flex justify-center">@SubTitle</MudText>
+        </div>
+        <br>
+        @Content
+    </MudPaper>
+</MudItem>
+
+@code {
+
+    ///<summary>Title of card</summary> 
+    [Parameter]
+    public string Title { get; set; }
+
+    ///<summary>Subtitle of card</summary>
+    [Parameter]
+    public string SubTitle { get; set; }
+
+    ///<summary>Breakpoint for Small to medium tablet</summary>
+    [Parameter]
+    public int sm { get; set; } = 6;
+
+    ///<summary>Breakpoint for Small to large phone</summary>
+    [Parameter]
+    public int xs { get; set; } = 12;
+
+    ///<summary>Breakpoint for Large tablet to laptop</summary>
+    [Parameter]
+    public int md { get; set; } = 4;
+    
+    ///<summary>Breakpoint for Desktop</summary>
+    [Parameter]
+    public int lg { get; set; }
+
+    ///<summary>Add Components to body of paper</summary>
+    [Parameter]
+    public RenderFragment Content { get; set; }
+
+    ///<summary>Select Icon for display</summary>
+    [Parameter]
+    public string Icon { get; set; }
+
+    ///<summary>Enable Icon</summary>
+    [Parameter]
+    public bool ShowIcon { get; set; }
+
+}
