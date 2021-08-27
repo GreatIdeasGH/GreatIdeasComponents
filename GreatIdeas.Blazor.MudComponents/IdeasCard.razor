@@ -1,12 +1,48 @@
 ﻿@using GreatIdeas.Extensions
+@inherits IdeasCardBase
 
+<MudItem xs="@xs" sm="@sm" md="@md" lg="@lg">
+    <MudCard Elevation=2>
+        <MudCardHeader>
+            <CardHeaderContent>
+                <MudItem>
+                    <div class="d-flex align-center">
+                        @if (ShowIcon)
+                        {
+                            <MudIcon Icon=@Icon Size="Size.Medium" Class="mr-2"/>
+                            <MudText Typo="Typo.h6">@Title</MudText>
+                        }
+                        else
+                        {
+                            <MudText Typo="Typo.h6">@Title</MudText>
+                        }
+                    </div>
+                </MudItem>
+                
+                <MudText Typo="Typo.body2">@SubTitle</MudText>
+                
+            </CardHeaderContent>
+            
+            <CardHeaderActions>
+                @HeaderActions
+            </CardHeaderActions>
+        </MudCardHeader>
+        <MudCardContent>
+            @Content
+        </MudCardContent>
+    </MudCard>
+</MudItem>
+
+
+@*
 <MudItem xs="@xs" sm="@sm" md="@md" lg="@lg">
     <MudCard Elevation=2>
         <MudCardHeader>
             <CardHeaderAvatar>
                 @if (ShowAvator)
                 {
-                    <MudAvatar Color="Color.Tertiary" Variant="Variant.Filled">@Initials()</MudAvatar>
+                    // <MudAvatar Color="Color.Tertiary" Variant="Variant.Filled">@Initials()</MudAvatar>
+                    <MudIcon Icon=@Icon Size="Size.Medium" Class="mr-2"/>
                 }
             </CardHeaderAvatar>
             <CardHeaderContent>
@@ -24,50 +60,5 @@
             @Actions
         </MudCardActions>
     </MudCard>
-</MudItem>
+</MudItem>*@
 
-@code {
-
-    ///<summary>Title of card</summary> 
-    [Parameter]
-    public string Title { get; set; }
-
-    ///<summary>Subtitle of card</summary>
-    [Parameter]
-    public string SubTitle { get; set; }
-
-    ///<summary>Breakpoint for Small to medium tablet</summary>
-    [Parameter]
-    public int sm { get; set; } = 6;
-
-    ///<summary>Breakpoint for Small to large phone</summary>
-    [Parameter]
-    public int xs { get; set; } = 12;
-
-    ///<summary>Breakpoint for Large tablet to laptop</summary>
-    [Parameter]
-    public int md { get; set; } = 4;
-    
-    ///<summary>Breakpoint for Desktop</summary>
-    [Parameter]
-    public int lg { get; set; }
-
-    ///<summary>Add Components to body of card</summary>
-    [Parameter]
-    public RenderFragment Content { get; set; }
-
-    ///<summary>Add Components to footer of card</summary>
-    [Parameter]
-    public RenderFragment Actions { get; set; }
-
-    ///<summary>Enable avator in card header</summary>
-    [Parameter]
-    public bool ShowAvator { get; set; }
-
-    ///<summary>Add buttons to card header</summary>
-    [Parameter]
-    public RenderFragment HeaderActions { get; set; }
-
-    string Initials() => Title.GetInitials("");
-
-}

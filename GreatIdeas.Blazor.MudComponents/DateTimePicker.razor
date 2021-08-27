@@ -4,10 +4,11 @@
 @typeparam T
 
 <div class="d-flex">
-    <MudDatePicker Date="dateTime" DateChanged="DateChanged" DateFormat="@datePattern" Editable="true" />
-    <MudTimePicker Time="@(dateTime.HasValue ? dateTime.Value.TimeOfDay : null)" TimeChanged="TimeChanged" AmPm="timeAmPm" Editable="true" />
+    <MudDatePicker Date="DateTime_" DateChanged="DateChanged" DateFormat="@datePattern" Editable="true" />
+    <MudTimePicker Time="@(DateTime_.HasValue ? DateTime_.Value.TimeOfDay : null)" TimeChanged="TimeChanged" AmPm="timeAmPm" Editable="true" />
 </div>
 
+@*
 @code {
     [Parameter] public T Value { get; set; }
     [Parameter] public EventCallback<T> ValueChanged { get; set; }
@@ -118,5 +119,5 @@
             object dtobj = (object)dateTime;
             await ValueChanged.InvokeAsync((T)dtobj);
         }
-    }
+    }*@
 }
