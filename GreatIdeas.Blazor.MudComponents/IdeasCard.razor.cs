@@ -9,7 +9,7 @@ using GreatIdeas.Extensions;
 
 namespace GreatIdeas.Blazor.MudComponents
 {
-    public class IdeasCardBase: IdeasIconBase
+    public class IdeasCardBase: IdeasComponentBase
     {
         ///<summary>Add Components to footer of card</summary>
         [Parameter]
@@ -28,5 +28,10 @@ namespace GreatIdeas.Blazor.MudComponents
         public string Image { get; set; }
 
         string Initials() => Title.GetInitials("");
+        
+        ///<summary>Class to apply css</summary>
+        [Parameter]
+        public Color Color { get; set; }
+
     }
 }

@@ -1,7 +1,7 @@
 ﻿@using GreatIdeas.Extensions
 @inherits IdeasCardBase
 
-<MudItem xs="@xs" sm="@sm" md="@md" lg="@lg">
+<MudItem xs="@xs" sm="@sm" md="@md" lg="@lg" Class="@Class">
     <MudCard Elevation=2>
         <MudCardHeader>
             <CardHeaderContent>
@@ -9,12 +9,12 @@
                     <div class="d-flex align-center">
                         @if (ShowIcon)
                         {
-                            <MudIcon Icon=@Icon Size="Size.Medium" Class="mr-2"/>
-                            <MudText Typo="Typo.h6">@Title</MudText>
+                            <MudIcon Icon=@Icon Color="@Color" Size="Size.Medium" Class="mr-2"/>
+                            <MudText Typo="Typo.h6" Color="@Color">@Title</MudText>
                         }
                         else
                         {
-                            <MudText Typo="Typo.h6">@Title</MudText>
+                            <MudText Typo="Typo.h6" Color="@Color">@Title</MudText>
                         }
                     </div>
                 </MudItem>

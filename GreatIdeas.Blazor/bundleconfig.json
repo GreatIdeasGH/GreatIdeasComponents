@@ -1,0 +1,8 @@
+[
+  {
+    "outputFileName": "wwwroot/GreatIdeasBlazor.min.js",
+    "inputFiles": [
+      "wwwroot/GreatIdeasBlazor.js"
+    ]
+  }
+]

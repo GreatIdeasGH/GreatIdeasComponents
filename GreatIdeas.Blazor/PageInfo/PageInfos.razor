@@ -5,12 +5,22 @@
     
       
       [Parameter] public string Title { get; set; }
-      [Parameter] public string Description { get; set; }
+
+      [Parameter]
+      public string Separater { get; set; } = "|";
+
+      [Parameter]
+      public string Description { get; set; }
+      
       [Parameter] public string ApplicationName { get; set; }
 
       protected override async Task OnAfterRenderAsync(bool firstRender)
       {
-            await _jsRuntime.SetBlazorTitle($"{Title} - {ApplicationName}");
+            @if(string.IsNullOrEmpty(ApplicationName))
+                  await _jsRuntime.SetBlazorTitle($"{Title}");
+            
+            @if(ApplicationName != null)
+                  await _jsRuntime.SetBlazorTitle($"{Title} {Separater} {ApplicationName}");
             
             await _jsRuntime.SetBlazorDescription($"{Description}");
       }

@@ -14,10 +14,10 @@ namespace GreatIdeas.Blazor.MudComponents
         public string Content { get; set; }
 
         [Parameter]
-        public Color Color { get; set; } = Color.Info;
+        public Severity Severity { get; set; } = Severity.Info;
         private string Theme()
         {
-            return $"pa-2 mt-2 mud-theme-{Color}";
+            return $"pa-2 mt-2 mud-theme-{Severity}";
         }
 
         [Parameter]

@@ -1,8 +1,8 @@
 ﻿@using GreatIdeas.Extensions
-@inherits IdeasIconBase
+@inherits IdeasComponentBase
 
 <MudItem xs="@xs" sm="@sm" md="@md" lg="@lg">
-    <MudPaper Class="ma-2 pa-4" Elevation=2>
+    <MudPaper Class="pa-4" Elevation=2>
         <MudItem>
             <div class="d-flex align-center">
                 @if (ShowIcon)
@@ -19,7 +19,7 @@
         <div>
             <MudText Typo="Typo.body2" Class="d-flex">@SubTitle</MudText>
         </div>
-        <br>
+        
         @Content
     </MudPaper>
 </MudItem>

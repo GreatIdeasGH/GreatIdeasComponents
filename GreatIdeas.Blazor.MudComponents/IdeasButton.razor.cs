@@ -19,12 +19,15 @@ namespace GreatIdeas.Blazor.MudComponents
         public string Caption { get; set; }
 
         [Parameter]
-        public Color Color { get; set; } = Color.Primary;
+        public Color Color { get; set; } = Color.Default;
 
         [Parameter]
         public Variant Variant { get; set; } = Variant.Text;
 
         [Parameter]
         public string TooltipText { get; set; }
+
+        [Parameter]
+        public bool Disabled { get; set; }
     }
 }

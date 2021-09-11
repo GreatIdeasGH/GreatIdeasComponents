@@ -1,10 +1,7 @@
 ﻿@if (EnableInfo)
 {
-    <MudItem Class="@($"pa-2 mt-2")">
-        <MudText Color="@Color">
-            @Content
-        </MudText>
-        <MudDivider></MudDivider>
+    <MudItem Class="@($"mb-2 mt-2")">
+        <MudAlert Severity=@Severity>@Content</MudAlert>
     </MudItem>
 }
 
