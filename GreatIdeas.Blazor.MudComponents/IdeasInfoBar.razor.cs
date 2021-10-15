@@ -1,9 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Web;
 using MudBlazor;
 
 namespace GreatIdeas.Blazor.MudComponents
@@ -21,6 +16,6 @@ namespace GreatIdeas.Blazor.MudComponents
         }
 
         [Parameter]
-        public bool EnableInfo { get; set; }
+        public bool Enable { get; set; }
     }
 }

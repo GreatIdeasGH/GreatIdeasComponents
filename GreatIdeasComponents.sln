@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GreatIdeas.Blazor", "GreatI
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GreatIdeas.Blazor.MudComponents", "GreatIdeas.Blazor.MudComponents\GreatIdeas.Blazor.MudComponents.csproj", "{D8AC9182-3963-4952-B649-6C9D0D417EB1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorClassLibrary1", "RazorClassLibrary1\RazorClassLibrary1.csproj", "{B3104A86-3101-4959-9E5B-6FEA1B48FBDB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D8AC9182-3963-4952-B649-6C9D0D417EB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8AC9182-3963-4952-B649-6C9D0D417EB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8AC9182-3963-4952-B649-6C9D0D417EB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3104A86-3101-4959-9E5B-6FEA1B48FBDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3104A86-3101-4959-9E5B-6FEA1B48FBDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3104A86-3101-4959-9E5B-6FEA1B48FBDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3104A86-3101-4959-9E5B-6FEA1B48FBDB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

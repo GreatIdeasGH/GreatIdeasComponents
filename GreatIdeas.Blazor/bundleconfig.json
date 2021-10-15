@@ -4,5 +4,11 @@
     "inputFiles": [
       "wwwroot/GreatIdeasBlazor.js"
     ]
+  },
+  {
+    "outputFileName": "wwwroot/app.min.js",
+    "inputFiles": [
+      "wwwroot/app.js"
+    ]
   }
 ]
