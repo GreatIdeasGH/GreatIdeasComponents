@@ -17,7 +17,7 @@ namespace GreatIdeas.Blazor.MudComponents
             }
         }
 
-        protected void ClearSearch()
+        protected virtual void ClearSearch()
         {
             SearchTerm = String.Empty;
             OnSearchChanged.InvokeAsync(SearchTerm);
